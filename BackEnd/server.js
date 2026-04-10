@@ -1,6 +1,6 @@
 require("dotenv").config(); //to access data from .env file
 const app = require("./src/app")
-const connectToDB = require("./config/database.js")
+const connectToDB = require("./src/config/database.js")
 
 connectToDB()
 

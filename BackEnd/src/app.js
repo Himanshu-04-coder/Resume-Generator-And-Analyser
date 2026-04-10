@@ -9,7 +9,7 @@ app.use(express.json())
 app.use(cookieParser())
 
 // Importing Routes here
-const authRouter = require("../routes/auth.route.js")
+const authRouter = require("./routes/auth.route.js")
 
 
 // Using Routes here
