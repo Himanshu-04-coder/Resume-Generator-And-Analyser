@@ -1,0 +1,47 @@
+selfDescription:{
+    I am a motivated and enthusiastic fresher MERN Stack Developer with a strong foundation in MongoDB, Express.js, React.js, and Node.js. I have hands-on experience building full-stack web applications through academic projects and personal projects, where I developed responsive user interfaces, REST APIs, and database integrations. I am passionate about writing clean, efficient code and continuously learning new technologies to improve my development skills. I am eager to contribute to a dynamic team, solve real-world problems, and grow as a professional software developer in a challenging work environment.
+
+}
+
+jobDescription:{
+    Job Title: Full Stack Developer (MERN Stack) – Fresher
+
+We are hiring a motivated MERN Stack Developer fresher to build and maintain web applications using MongoDB, Express.js, React.js, and Node.js.
+
+Responsibilities:
+
+Develop frontend and backend features
+Build REST APIs and integrate databases
+Debug, test, and optimize applications
+Collaborate with team members on projects
+
+Requirements:
+
+Knowledge of MongoDB, Express.js, React.js, Node.js
+Basic understanding of JavaScript, HTML, CSS
+Familiarity with Git and REST APIs
+Strong problem-solving and learning attitude
+
+Freshers with projects/internship experience are welcome to apply
+}
+
+
+JSON REPORT : {
+    {
+    "message": "Interview report generated successfully",
+    "interviewReport": {
+        "jobDescription": "Job Title: Full Stack Developer (MERN Stack) – Fresher\n\nWe are hiring a motivated MERN Stack Developer fresher to build and maintain web applications using MongoDB, Express.js, React.js, and Node.js.\n\nResponsibilities:\n\nDevelop frontend and backend features\nBuild REST APIs and integrate databases\nDebug, test, and optimize applications\nCollaborate with team members on projects\n\nRequirements:\n\nKnowledge of MongoDB, Express.js, React.js, Node.js\nBasic understanding of JavaScript, HTML, CSS\nFamiliarity with Git and REST APIs\nStrong problem-solving and learning attitude\n\nFreshers with projects/internship experience are welcome to apply",
+        "resume": "Yash Grade\n+91 7827047824 | yashrairajput@gmail.com | LinkedIn | GitHub | Portfolio\nNew Delhi, India\nProfessional Summary\nResults-driven B.Tech IT student (CGPA 9.14) with hands-on experience in full-stack web development, AI-powered SaaS\napplications, IoT systems, and data analytics. Proficient in Next.js, React, TypeScript, Python, and SQL. Experienced in\ndeveloping and deploying AI-integrated platforms on modern cloud infrastructure. Seeking a Software / Web Development\nInternship.\nEducation\nMaharaja Surajmal Institute of Technology 2023 – 2027\nB.Tech in Information Technology New Delhi, India\nCGPA: 9.14 / 10.0\nTechnical Skills\nProgramming: C, C++, Python, Java, JavaScript, TypeScript, SQL\nWeb Development: HTML, CSS, React.js, Next.js, Tailwind CSS, REST APIs\nDatabases & Cloud: PostgreSQL, MongoDB, Prisma ORM, Vercel, AWS\nTools: Git, GitHub, VS Code, Figma, Canva, Excel\nCore Areas: Full Stack Development, AI Integration, IoT Systems, Data Analytics\nSoft Skills: Leadership, Collaboration, Adaptability, Problem Solving\nProjects\nDentwise — AI Voice Dental Assistant Next.js, TypeScript, PostgreSQL, Prisma, Tailwind CSS\n– Developed a full-stack AI-powered SaaS with voice-based interaction and appointment scheduling.\n– Integrated an AI voice agent to automate patient communication and deliver care recommendations.\n– Implemented secure authentication and database management using PostgreSQL and Prisma ORM.\n– Built responsive UI with Next.js and Tailwind CSS and deployed on Vercel.\nPersonal Portfolio Website HTML, CSS, JavaScript\n– Built a mobile-responsive portfolio showcasing projects, certifications, and technical achievements.\n– Implemented animations, smooth scrolling, and responsive design for enhanced user experience.\n– Deployed via GitHub Pages with version control using Git and GitHub.\nInternship\nNIT Warangal — IoT Research Intern Jun – Jul 2025\nDept. of CSE | Under Prof. Nidhi Sonkar Remote\n– Researched an IoT-based Smart Waste Management System for real-time monitoring and optimization.\n– Studied IoT architecture, sensor integration, and data analytics pipeline for smart city solutions.\n– Utilized Python for data visualization and performance trend analysis.\n– Certificate: View NIT Warangal Certificate\nCertifications & Virtual Experiences\n• Oracle Cloud & Data Foundations (4 Certs) — Oracle University (Aug–Sep 2025)\n• AWS Solutions Architecture | JPMorgan Quant Research — Forage (Aug 2025)\n• Deloitte Technology | Deloitte Data Analytics | GenAI Data Analytics — Forage (Oct 2025)\nWorkshops & Hackathons\n• Data Analytics Industrial Visit (Oct 2024) | Generative AI Workshop (Feb 2025) — DUCAT at MSIT\n• IoT Workshop — DUCAT at MSIT (Apr 2025) | Adobe Designathon — IIT Delhi Tryst 2025 (Mar 2025)\nRelevant Coursework\nData Structures & Algorithms Database Management Operating Systems\nObject Oriented Programming Computer Networks Artificial Intelligence\n\n-- 1 of 1 --\n\n",
+        "selfDescription": "I am a motivated and enthusiastic fresher MERN Stack Developer with a strong foundation in MongoDB, Express.js, React.js, and Node.js. I have hands-on experience building full-stack web applications through academic projects and personal projects, where I developed responsive user interfaces, REST APIs, and database integrations. I am passionate about writing clean, efficient code and continuously learning new technologies to improve my development skills. I am eager to contribute to a dynamic team, solve real-world problems, and grow as a professional software developer in a challenging work environment.\n",
+        "user": "69d51f557c24c8e86a713de1",
+        "_id": "69de7152a1b8353602c17b7d",
+        "technicalQuestionsSchema": [],
+        "behavioralQuestionsSchema": [],
+        "skillGapSchema": [],
+        "preparationSchema": [],
+        "createdAt": "2026-04-14T16:54:42.224Z",
+        "updatedAt": "2026-04-14T16:54:42.224Z",
+        "__v": 0
+    }
+}
+}
