@@ -15,11 +15,11 @@ export async function register({username, email, password}){
     try {
         const response = await api.post("/register",
             {username, email, password})
-            
-            return response.data
+        return response.data
     }
     catch (error) {
-        console.log(error);
+        const message = error.response?.data?.message || error.message || "Registration failed"
+        throw new Error(message)
     }
 }
 
@@ -28,22 +28,21 @@ export async function login({email, password}){
     try{
         const response = await api.post("/login", 
             {email, password})
-            return response.data
+        return response.data
     }catch(error){
-        console.log(error);
+        const message = error.response?.data?.message || error.message || "Login failed"
+        throw new Error(message)
     }
 }
 
 export async function logout(){
     try{
         const response = await api.get("/logout")
-        
         return response.data
     }
-        
-
     catch(error){
-        console.log(error);
+        const message = error.response?.data?.message || error.message || "Logout failed"
+        throw new Error(message)
     }
 }
 

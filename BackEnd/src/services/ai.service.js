@@ -62,9 +62,13 @@ const interviewReportSchema = {
                 },
                 required: ["day", "focus", "tasks"]
             }
+        },
+        title: {
+            type: Type.STRING,
+            description: "The job title of the job for which the interview report is generated"
         }
     },
-    required: ["matchScore", "technicalQuestions", "behavioralQuestions", "skillGaps", "preparationPlan"]
+    required: ["matchScore", "technicalQuestions", "behavioralQuestions", "skillGaps", "preparationPlan", "title"]
 }
 
 
@@ -87,7 +91,6 @@ async function generateInterviewReport({ resume, selfDescription, jobDescription
     return JSON.parse(response.text)
 
 }
-    
 
 
 
