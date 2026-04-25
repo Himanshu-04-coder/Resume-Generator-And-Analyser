@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import '../style/interview.scss'
 import { useInterview } from '../hooks/useInterview.js'
 import { useNavigate, useParams } from 'react-router'
+import { useAuth } from '../../auth/hooks/useAuth'
 
 
 
@@ -61,6 +62,18 @@ const Interview = () => {
     const [ activeNav, setActiveNav ] = useState('technical')
     const { report, getReportById, loading, getResumePdf } = useInterview()
     const { interviewId } = useParams()
+    const navigate = useNavigate()
+    const auth = useAuth()
+
+    const onLogout = async () => {
+        try {
+            if (auth?.handleLogout) await auth.handleLogout()
+            else if (auth?.logout) await auth.logout()
+            navigate('/login')
+        } catch (err) {
+            console.error("Logout failed", err)
+        }
+    }
 
     useEffect(() => {
         if (interviewId) {
@@ -185,9 +198,25 @@ const Interview = () => {
                             ))}
                         </div>
                     </div>
-
+                        <button
+                            onClick={onLogout}
+                            className='interview-nav__item'
+                            style={{ color: '#ef4444', justifyContent: 'center' }}>
+                            <span className='interview-nav__icon'>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                            {/* Door frame */}
+                            <rect x="3" y="3" width="8" height="18" rx="1" />
+                            {/* Arrow pointing right */}
+                            <line x1="10" y1="12" x2="21" y2="12" />
+                            <polyline points="17 8 21 12 17 16" />
+                            </svg>
+                            </span>
+                            Logout
+                        </button>
                 </aside>
+                
             </div>
+            
         </div>
     )
 }

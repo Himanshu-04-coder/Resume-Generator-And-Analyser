@@ -2,6 +2,7 @@ import React, { useState, useRef } from 'react'
 import "../style/home.scss"
 import { useInterview } from '../hooks/useInterview.js'
 import { useNavigate } from 'react-router'
+import { useAuth } from '../../auth/hooks/useAuth'
 
 const Home = () => {
 
@@ -12,6 +13,17 @@ const Home = () => {
     const resumeInputRef = useRef()
 
     const navigate = useNavigate()
+    const auth = useAuth()
+
+    const onLogout = async () => {
+        try {
+            if (auth?.handleLogout) await auth.handleLogout()
+            else if (auth?.logout) await auth.logout()
+            navigate('/login')
+        } catch (err) {
+            console.error("Logout failed", err)
+        }
+    }
 
     const handleGenerateReport = async () => {
         // Fallback to undefined if no file is selected to prevent crash
@@ -28,7 +40,7 @@ const Home = () => {
             setSelectedFileName("")
         }
     }
-
+    
     if (loading) {
         return (
             <main className='loading-screen'>
@@ -157,6 +169,22 @@ const Home = () => {
                     </ul>
                 </section>
             )}
+             {/* Top Action Bar */}
+            <div style={{ display: 'flex', justifyContent: 'flex-end', padding: '1rem 2rem 0' }}>
+                <button
+                    onClick={onLogout}
+                    style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: '#ef4444', background: 'none', border: 'none', cursor: 'pointer', fontSize: '1rem', fontWeight: '500' }}
+                >
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    {/* Door frame */}
+                    <rect x="3" y="3" width="8" height="18" rx="1" />
+                    {/* Arrow pointing right */}
+                    <line x1="10" y1="12" x2="21" y2="12" />
+                    <polyline points="17 8 21 12 17 16" />
+                </svg>
+                    Logout
+                </button>
+            </div>
 
             {/* Page Footer */}
             <footer className='page-footer'>
