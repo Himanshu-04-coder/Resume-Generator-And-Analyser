@@ -3,7 +3,6 @@ import { useNavigate, Link } from 'react-router';
 import "../auth.form.scss"
 import { useAuth } from '../hooks/useAuth';
 
-
 function Login() {
 
     const {loading, handleLogin, error: authError} = useAuth()
@@ -31,7 +30,7 @@ function Login() {
     }
 
     if(loading) {
-        return (<main> <h1>Loading......</h1> </main>)
+        return (<main><div className="loader"></div></main>)
     }   
 
     return ( 
