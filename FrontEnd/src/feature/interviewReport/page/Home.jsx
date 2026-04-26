@@ -11,6 +11,7 @@ const Home = () => {
     const [ selfDescription, setSelfDescription ] = useState("")
     const [ selectedFileName, setSelectedFileName ] = useState("")
     const resumeInputRef = useRef()
+    const [ errorPopup, setErrorPopup ] = useState("")
 
     const navigate = useNavigate()
     const auth = useAuth()
@@ -26,10 +27,29 @@ const Home = () => {
     }
 
     const handleGenerateReport = async () => {
-        // Fallback to undefined if no file is selected to prevent crash
         const resumeFile = resumeInputRef.current?.files?.[ 0 ]
-        const data = await generateReport({ jobDescription, selfDescription, resumeFile })
-        navigate(`/interview/${data._id}`)
+
+        if (!jobDescription.trim()) {
+            setErrorPopup("Please provide a Target Job Description to proceed.")
+            return
+        }
+
+        if (!resumeFile && !selfDescription.trim()) {
+            setErrorPopup("Please provide either a Resume or a Quick Self-Description.")
+            return
+        }
+
+        try {
+            const data = await generateReport({ jobDescription, selfDescription, resumeFile })
+            if (data && data._id) {
+                navigate(`/interview/${data._id}`)
+            } else {
+                throw new Error("Invalid response from server")
+            }
+        } catch (err) {
+            console.error("Report generation failed:", err)
+            setErrorPopup("We experienced an issue generating your report. Please try again Later.")
+        }
     }
 
     const handleFileSelect = (e) => {
@@ -51,6 +71,24 @@ const Home = () => {
 
     return (
         <div className='home-page'>
+
+            {/* Error Popup Modal */}
+            {errorPopup && (
+                <div className='error-modal-overlay'>
+                    <div className='error-modal-box'>
+                        <svg className='error-modal-icon' xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#ef4444" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="12" y1="8" x2="12" y2="12"></line>
+                            <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                        </svg>
+                        <h3 className='error-modal-title'>Missing Information</h3>
+                        <p className='error-modal-text'>{errorPopup}</p>
+                        <button onClick={() => setErrorPopup("")} className='button primary-button error-modal-btn'>
+                            Got it
+                        </button>
+                    </div>
+                </div>
+            )}
 
             {/* Page Header */}
             <header className='page-header'>
@@ -169,7 +207,7 @@ const Home = () => {
                     </ul>
                 </section>
             )}
-             {/* Top Action Bar */}
+             {/* Bottom Action Bar */}
             <div style={{ display: 'flex', justifyContent: 'flex-end', padding: '1rem 2rem 0' }}>
                 <button
                     onClick={onLogout}

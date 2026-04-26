@@ -100,7 +100,7 @@ async function generatePdfFromHtml(htmlContent) {
 
     const pdfBuffer = await page.pdf({
         format: "A4", margin: {
-            top: "10mm",
+            top: "8mm",
             bottom: "12mm",
             left: "10mm",
             right: "10mm",
@@ -139,7 +139,7 @@ async function generateResumePdf({ resume, selfDescription, jobDescription }) {
                     STRICT 1-PAGE REQUIREMENT: The resume MUST fit on exactly one A4 page when rendered by Puppeteer. To enforce this:
                     - Limit Experience to 2 roles (3 bullets each), Projects to 2 (2 bullets each), Summary to 2 lines.
                     - Skills must be inline/comma-separated, not bulleted lists.
-                    - Cut any section that is not relevant to the Job Description`
+                    - Cut any section that is not relevant to the Job Description to set the whole content in single page only`
 
     // `Generate a highly professional, ATS-friendly resume for a candidate with the following details:
     //                     Resume: ${resume}
