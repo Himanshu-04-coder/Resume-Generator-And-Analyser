@@ -99,8 +99,7 @@ Before you begin, ensure you have the following installed:
    ```
 
 5. **Access the Application**
-   - Open your browser and navigate to `https://resume-analyzer-and-report-generator.netlify.app/register`
-
+   - Open your browser and navigate to `http://localhost:3000` (or the configured port)
 ## 📖 Usage Guide
 
 ### Creating a Resume
@@ -241,5 +240,8 @@ Have an idea? Open an issue and describe:
 ---
 
 **⭐ If you find this project helpful, please consider giving it a star!**
+
+## LIVE APPLICATION
+- Link `https://resume-analyzer-and-report-generator.netlify.app/`
 
 Made with ❤️ by [Himanshu-04-coder](https://github.com/Himanshu-04-coder)
