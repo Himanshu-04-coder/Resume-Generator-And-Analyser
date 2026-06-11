@@ -14,20 +14,34 @@ This full-stack application combines a modern frontend interface with a robust b
 
 ## ✨ Key Features
 
-- **📄 Resume Generation**: Create professional resumes with customizable templates
+- **📄 Resume Generation**: Create professional resume as per respective job role
 - **🔍 Resume Analysis**: Analyze resume content for optimization and improvement suggestions
-- **👁️ Real-time Preview**: View resume changes in real-time as you make edits
 - **📱 Responsive Design**: Works seamlessly across desktop, tablet, and mobile devices
-- **🎨 Customizable Styling**: Multiple themes and styling options available
 - **📊 Content Insights**: Get detailed insights about your resume content
-- **⬇️ Export Options**: Download resumes in multiple formats
+- **⬇️ Export Options**: Download updated resume
+
+## The application takes:
+📄 Resume (PDF)
+📝 Job Description
+👤 Self Description
+👉 Using these inputs, the system:
+
+## Analyzes skills, keywords, and experience from the resume Compares them with the job requirements
+
+## Generates a match score (0–100) based on alignment
+- 📊 What the Report Provides:
+- ✔️ Skill match analysis & gap identification
+- ✔️ AI-generated technical & behavioral interview questions (with answers)
+- ✔️ A personalized 7-day roadmap to improve missing skills
+- ✔️ Suggestions to increase resume shortlisting chances
+- ✔️ Generates an optimized resume PDF tailored to the job description
 
 ## 🛠️ Technology Stack
 
-### Frontend (71.5%)
+### Frontend
 - **JavaScript** - Core frontend scripting
 - **HTML** - Markup structure
-- **SCSS** (28.1%) - Advanced styling and theming
+- **SCSS** - Advanced styling and theming
 
 ### Backend
 - **Node.js** - Server runtime environment
@@ -85,7 +99,7 @@ Before you begin, ensure you have the following installed:
    ```
 
 5. **Access the Application**
-   - Open your browser and navigate to `http://localhost:3000` (or the configured port)
+   - Open your browser and navigate to `https://resume-analyzer-and-report-generator.netlify.app/register`
 
 ## 📖 Usage Guide
 
@@ -100,11 +114,11 @@ Before you begin, ensure you have the following installed:
 
 ### Analyzing Your Resume
 
-1. Upload or paste your resume content
-2. Click "Analyze"
+1. Upload resune or write your self description or both
+2. Click "Generate My Interview Strategy"
 3. Review the analysis report with suggestions
 4. Make recommended improvements
-5. Download the optimized version
+5. Download the optimized version of your resume
 
 ## 🔧 Available Commands
 
@@ -194,20 +208,12 @@ Have an idea? Open an issue and describe:
 - Why you think it would be useful
 - How it should work
 
-## 📄 License
-
-This project is licensed under the **MIT License** - see the LICENSE file for details.
 
 ## 📞 Support
 
 - **Issues**: [GitHub Issues](https://github.com/Himanshu-04-coder/Resume-Generator-And-Analyser/issues)
 - **Discussions**: [GitHub Discussions](https://github.com/Himanshu-04-coder/Resume-Generator-And-Analyser/discussions)
 
-## 🙏 Acknowledgments
-
-- Thanks to all contributors
-- Icons and assets from open-source communities
-- Node.js and Express.js documentation
 
 ## 📊 Project Statistics
 
