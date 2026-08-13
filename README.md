@@ -242,6 +242,6 @@ Have an idea? Open an issue and describe:
 **⭐ If you find this project helpful, please consider giving it a star!**
 
 ## LIVE APPLICATION
-- Link `https://resume-analyzer-and-report-generator.netlify.app/`
+- Link `https://resume-analyzer-and-report-generator.netlify.app/register`
 
 Made with ❤️ by [Himanshu-04-coder](https://github.com/Himanshu-04-coder)
